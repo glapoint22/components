@@ -1,0 +1,11 @@
+<!-- Label -->
+<label class="radio-button" [ngClass]="{'input-disabled': disabled()}">
+    <!-- Input -->
+    <input #input type="radio" [name]="name()" [disabled]="disabled()" [checked]="checked()"
+        (change)="change(input.checked)">
+
+    <!-- Checkmark -->
+    <span class="checkmark"
+        [ngClass]="{'primary-color': color() === 'primary','secondary-color': color() === 'secondary'}"></span>
+    <ng-content></ng-content>
+</label>
