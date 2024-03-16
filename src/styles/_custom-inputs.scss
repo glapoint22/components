@@ -9,7 +9,7 @@
 
     &:hover {
         input:not(:checked):not(:disabled)~.checkmark {
-            border-color: var(--hover-border-color);
+            border-color: var(--default-hover-color);
         }
     }
 
@@ -18,7 +18,7 @@
         appearance: none;
 
         &:disabled~.checkmark {
-            border-color: var(--disabled-border-color);
+            border-color: var(--disabled-color);
 
             &::after {
                 background-color: transparent;
@@ -31,7 +31,7 @@
 
 .checkmark {
     border: 2px solid;
-    border-color: var(--border-color);
+    border-color: var(--default-color);
     transition: border-color 120ms;
     position: relative;
     margin-right: 5px;
@@ -44,5 +44,5 @@
 
 .input-disabled {
     cursor: default;
-    color: var(--disabled-border-color);
+    color: var(--disabled-font-color);
 }

@@ -1,0 +1,75 @@
+.button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    height: 30px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    padding: 0 16px;
+    text-decoration: none;
+
+    .material-symbols-outlined {
+        font-size: 20px;
+    }
+}
+
+.icon-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+// Default Color
+.default-button-color {
+    background-color: var(--default-color);
+    color: var(--default-font-color);
+
+    &:hover:not(:disabled) {
+        background-color: var(--default-hover-color);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--default-active-color);
+    }
+}
+
+// Primary Color
+.primary-button-color {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+
+    &:hover:not(:disabled) {
+        background-color: var(--primary-hover-color);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--primary-active-color);
+    }
+}
+
+// Secondary Color
+.secondary-button-color {
+    background-color: var(--secondary-color);
+    color: var(--secondary-font-color);
+
+    &:hover:not(:disabled) {
+        background-color: var(--secondary-hover-color);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--secondary-active-color);
+    }
+}
+
+// Disabled
+.button-disabled {
+    cursor: default;
+    background-color: var(--disabled-color);
+    color: var(--disabled-font-color);
+}

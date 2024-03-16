@@ -1,7 +1,27 @@
+$primary-color: #8d0882;
+$secondary-color: #ffba00;
+$default-color: #777777;
+
 :root {
-    --primary-color: #8d0882;
-    --secondary-color: #ffba00;
-    --border-color: #414141;
-    --hover-border-color: #0e0e0e;
-    --disabled-border-color: rgba(0, 0, 0, 0.38);
+    // Primary Color
+    --primary-color: #{$primary-color};
+    --primary-hover-color: #{lighten($primary-color, 4%)};
+    --primary-active-color: #{lighten($primary-color, 10%)};
+    --primary-font-color: white;
+
+    // Secondary Color
+    --secondary-color: #{$secondary-color};
+    --secondary-hover-color: #{darken($secondary-color, 4%)};
+    --secondary-active-color: #{darken($secondary-color, 10%)};
+    --secondary-font-color: black;
+
+    // Default Color
+    --default-color: #{$default-color};
+    --default-hover-color: #{lighten($default-color, 4%)};
+    --default-active-color: #{lighten($default-color, 10%)};
+    --default-font-color: white;
+
+    // Disabled Color
+    --disabled-color: rgba(0, 0, 0, 0.12);
+    --disabled-font-color: rgba(0, 0, 0, 0.38);
 }

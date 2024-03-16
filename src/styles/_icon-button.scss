@@ -1,0 +1,41 @@
+.primary-icon-button-color {
+    color: var(--primary-color);
+
+    &:hover:not(:disabled) {
+        color: var(--primary-hover-color);
+    }
+
+    &:active:not(:disabled) {
+        color: var(--primary-active-color);
+    }
+}
+
+.secondary-icon-button-color {
+    color: var(--secondary-color);
+
+    &:hover:not(:disabled) {
+        color: var(--secondary-hover-color);
+    }
+
+    &:active:not(:disabled) {
+        color: var(--secondary-active-color);
+    }
+}
+
+
+.default-icon-button-color {
+    color: var(--default-color);
+
+    &:hover:not(:disabled) {
+        color: var(--default-hover-color);
+    }
+
+    &:active:not(:disabled) {
+        color: var(--default-active-color);
+    }
+}
+
+.icon-button-disabled {
+    cursor: default;
+    color: var(--disabled-font-color);
+}
