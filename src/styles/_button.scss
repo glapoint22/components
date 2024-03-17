@@ -8,22 +8,11 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-    padding: 0 16px;
-    text-decoration: none;
-
-    .material-symbols-outlined {
-        font-size: 20px;
-    }
-}
-
-.icon-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    user-select: none;
+    padding: 0 10px;
     text-decoration: none;
 }
+
+
 
 // Default Color
 .default-button-color {

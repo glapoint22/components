@@ -1,0 +1,24 @@
+<backdrop (click)="close()">
+    <window (click)="$event.stopPropagation()">
+        <window-title-bar>
+            <window-title>{{title}}</window-title>
+            <window-title-bar-actions>
+                <button icon-button (click)="close()">
+                    <icon>close</icon>
+                </button>
+            </window-title-bar-actions>
+        </window-title-bar>
+        <window-content>
+            {{message}}
+        </window-content>
+        @if (buttons && buttons.length > 0) {
+        <window-actions>
+            @for (dialogButton of buttons; track dialogButton) {
+            <button button [color]="dialogButton.color"
+                (click)="dialogButton.func ? dialogButton.func() : null; close()">{{dialogButton.name}}</button>
+            }
+        </window-actions>
+        }
+
+    </window>
+</backdrop>

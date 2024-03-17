@@ -1,0 +1,11 @@
+.window-title-bar {
+    display: flex;
+    height: 32px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    user-select: none;
+    background: linear-gradient(#363636, #202020);
+  }

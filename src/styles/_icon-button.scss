@@ -1,3 +1,12 @@
+.icon-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    user-select: none;
+    text-decoration: none;
+}
+
 .primary-icon-button-color {
     color: var(--primary-color);
 
