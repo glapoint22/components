@@ -1,9 +1,8 @@
 .window {
     border-radius: 5px;
     box-shadow: 2px 2px 7px 2px rgba(black, 0.25);
-    border-width: 1px;
-    border-style: solid;
     background-color: #282828;
-    border-color: #414141;
     user-select: none;
+    border: 1px solid #505050;
+    outline: none;
 }

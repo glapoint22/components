@@ -23,6 +23,6 @@ export class DynamicComponentService {
     const dialogBoxComponentRef: ComponentRef<DialogBoxComponent> = this.createComponent(DialogBoxComponent);
     const dialogBoxComponent = dialogBoxComponentRef.instance;
 
-    dialogBoxComponent.set(dialogBoxComponentRef, title, message, buttons);
+    dialogBoxComponent.set(title, message, () => dialogBoxComponentRef.destroy(), buttons);
   }
 }

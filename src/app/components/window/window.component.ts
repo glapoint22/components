@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
 
 @Component({
   selector: 'window',
@@ -9,5 +9,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WindowComponent {
+  private divEl = viewChild<ElementRef<HTMLElement>>('el');
+
+  public setFocus(): void {
+    this.divEl()?.nativeElement.focus();
+  }
 
 }

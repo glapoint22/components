@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ComponentRef, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, viewChild } from '@angular/core';
 import { ButtonDirective } from '../../directives/button/button.directive';
 import { IconButtonDirective } from '../../directives/icon-button/icon-button.directive';
 import { BackdropComponent } from '../backdrop/backdrop.component';
@@ -34,17 +34,22 @@ export class DialogBoxComponent {
   protected title!: string;
   protected message!: string;
   protected buttons: Array<DialogBoxButton> | undefined;
-  private dialogComponentRef!: ComponentRef<DialogBoxComponent>;
+  private destroy!: Function;
+  private window = viewChild(WindowComponent);
 
-  public set(dialogComponentRef: ComponentRef<DialogBoxComponent>, title: string, message: string, buttons?: Array<DialogBoxButton>) {
+  ngOnInit() {
+    this.window()?.setFocus();
+  }
+
+  public set(title: string, message: string, destroyFunction: () => void, buttons?: Array<DialogBoxButton>) {
     this.title = title;
     this.message = message;
     this.buttons = buttons;
-    this.dialogComponentRef = dialogComponentRef;
+    this.destroy = destroyFunction;
   }
 
   protected close() {
-    this.dialogComponentRef.destroy();
+    this.destroy();
   }
 
 
