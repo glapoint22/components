@@ -1,0 +1,20 @@
+@use './app-theme' as app;
+@use './custom-input-theme' as custom-input;
+@use './radio-button-theme' as radio-button;
+@use './checkbox-theme' as checkbox;
+
+@mixin themes($theme) {
+    @include app.theme($theme);
+    @include custom-input.theme($theme);
+    @include radio-button.theme($theme);
+    @include checkbox.theme($theme);
+    // @include icon.theme($theme);
+    // @include button.theme($theme);
+    // @include icon-button.theme($theme);
+    // @include divider.theme($theme);
+    // @include form-field.theme($theme);
+    // @include calendar.theme($theme);
+    // @include dialog.theme($theme);
+    // @include menu.theme($theme);
+    // @include menu-bar.theme($theme);
+}
