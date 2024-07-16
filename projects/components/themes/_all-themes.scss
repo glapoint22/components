@@ -2,14 +2,16 @@
 @use './custom-input-theme' as custom-input;
 @use './radio-button-theme' as radio-button;
 @use './checkbox-theme' as checkbox;
+@use './icon-theme' as icon;
+@use './button-theme' as button;
 
 @mixin themes($theme) {
     @include app.theme($theme);
     @include custom-input.theme($theme);
     @include radio-button.theme($theme);
     @include checkbox.theme($theme);
-    // @include icon.theme($theme);
-    // @include button.theme($theme);
+    @include icon.theme($theme);
+    @include button.theme($theme);
     // @include icon-button.theme($theme);
     // @include divider.theme($theme);
     // @include form-field.theme($theme);
