@@ -33,7 +33,7 @@
 
 
 
-@mixin theme-variables($theme, $component, $config) {
+@mixin theme-variables($theme, $component, $configs) {
     $palettes: get-palettes($theme);
     $theme-type: get-theme-type($theme);
 
