@@ -43,7 +43,7 @@
         @each $palette-key in $palette-keys {
             $palette: map.get($palettes, $palette-key);
 
-            .#{$palette-key}-#{$component}-theme {
+            .#{$palette-key}-#{$component}-color {
                 @each $config in $configs {
                     $variable-name: map.get($config, 'variable-name');
 
