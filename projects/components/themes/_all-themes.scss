@@ -2,7 +2,7 @@
 @use './button-theme' as button;
 @use './calendar-theme' as calendar;
 @use './checkbox-theme' as checkbox;
-@use './custom-input-theme' as custom-input;
+@use './selection-control-theme' as selection-control;
 @use './dialog-theme' as dialog;
 @use './divider-theme' as divider;
 @use './dropdown-theme' as dropdown;
@@ -23,7 +23,7 @@
     @include button.theme($theme);
     @include calendar.theme($theme);
     @include checkbox.theme($theme);
-    @include custom-input.theme($theme);
+    @include selection-control.theme($theme);
     @include dialog.theme($theme);
     @include divider.theme($theme);
     @include dropdown.theme($theme);
