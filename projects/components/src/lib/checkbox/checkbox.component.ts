@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, forwardRef, input } from '@angular/core';
-import { Color } from '../models/color';
+import { ColorType } from '../shared/color';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ColorDirective } from '../color/color.directive';
@@ -17,7 +17,7 @@ import { ColorDirective } from '../color/color.directive';
   }]
 })
 export class CheckboxComponent implements ControlValueAccessor {
-  public color = input<Color>();
+  public color = input<ColorType>();
   public disabled = input(false, { transform: booleanAttribute });
   public checked!: boolean;
   protected onChange!: (value: boolean) => void;

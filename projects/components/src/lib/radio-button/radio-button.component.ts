@@ -1,6 +1,6 @@
 import { booleanAttribute, Component, inject, input } from '@angular/core';
 import { RadioGroupComponent } from '../radio-group/radio-group.component';
-import { Color } from '../models/color';
+import { ColorType } from '../shared/color';
 import { CommonModule } from '@angular/common';
 import { ColorDirective } from '../color/color.directive';
 
@@ -12,7 +12,7 @@ import { ColorDirective } from '../color/color.directive';
   styleUrl: './radio-button.component.scss'
 })
 export class RadioButtonComponent {
-  public color = input<Color>();
+  public color = input<ColorType>();
   public disabled = input(false, { transform: booleanAttribute });
   public checked!: boolean;
   public value = input<any>();

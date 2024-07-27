@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { booleanAttribute, Component, computed, input, Signal } from '@angular/core';
-import { Color } from '../models/color';
+import { ColorType } from '../shared/color';
 import { ColorDirective } from '../color/color.directive';
 
 @Component({
@@ -11,7 +11,7 @@ import { ColorDirective } from '../color/color.directive';
   styleUrl: './icon.component.scss'
 })
 export class IconComponent {
-  public color = input<Color>();
+  public color = input<ColorType>();
   public fill = input(false, { transform: booleanAttribute });
   public wght = input<number>(400);
   public grad = input<number>(0);
