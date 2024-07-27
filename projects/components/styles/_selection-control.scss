@@ -45,6 +45,23 @@
                 background-color: transparent;
             }
         }
+
+
+        &:not(:disabled) {
+            &:checked:focus~.checkmark {
+                &::before {
+                    background-color: var(--selection-control-selected-focus-color);
+                }
+            }
+
+            &:not(:checked):focus~.checkmark {
+                border-color: var(--selection-control-background-focus-color);
+
+                &::before {
+                    background-color: var(--selection-control-unselected-focus-color);
+                }
+            }
+        }
     }
 
     &:not([disabled=true]) {
@@ -85,18 +102,4 @@
     bottom: -10px;
     border-radius: 50%;
     pointer-events: none;
-
-}
-
-.selection-control-unselected-focus {
-    border-color: var(--selection-control-background-focus-color);
-
-    &::before {
-        background-color: var(--selection-control-unselected-focus-color);
-    }
-
-}
-
-.selection-control-selected-focus::before {
-    background-color: var(--selection-control-selected-focus-color);
 }
